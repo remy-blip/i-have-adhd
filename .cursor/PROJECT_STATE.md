@@ -16,5 +16,5 @@
 - **Next Tactical Steps:**
   - [x] Author five expert agents + safety rule
   - [x] Wire marketplace entry and README pointer
-  - [ ] Commit, push, open PR
-  - [ ] Sync copy to `~/.cursor/plugins/local/mushroom-therapy-experts`
+  - [x] Commit, push, open PR
+  - [x] Sync copy to `~/.cursor/plugins/local/mushroom-therapy-experts`
