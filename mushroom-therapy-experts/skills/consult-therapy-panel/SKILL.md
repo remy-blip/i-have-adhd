@@ -20,6 +20,7 @@ When this skill is active, answer as a **panel synthesis**, not a single hype vo
 | `eating-disorder-clinician` | BED / compulsive eating clinical care |
 | `psychedelic-harm-reduction` | Risks, legality, non-enabling safety |
 | `ethnomycology-context` | Culture vs biomedical "therapy" |
+| `psilocybin-therapy-specialist` | Assessment / prep / in-session guide (when asked for facilitation) |
 
 ## Output format
 
@@ -29,6 +30,7 @@ When this skill is active, answer as a **panel synthesis**, not a single hype vo
 4. **Risks / legality** — short, no dosing or sourcing.
 5. **Culture note** — only if relevant; otherwise skip.
 6. **Next step** — one non-drug action (talk to a licensed clinician, etc.).
+7. **Facilitation** — if the user wants assessment/prep/guide help, point them to `psilocybin-therapy-specialist` / `/psilocybin-session` instead of inventing a DIY protocol here.
 
 ## Rules
 
