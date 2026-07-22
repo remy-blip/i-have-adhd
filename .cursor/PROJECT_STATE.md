@@ -13,5 +13,5 @@
   - Scoring mirrors PRAT-24 STOP flags and readiness points; no dosing output.
 - **Next Tactical Steps:**
   - [x] Build dashboard UI + scoring engine
-  - [ ] Smoke-check via local server
-  - [ ] Commit, push, update PR
+  - [x] Smoke-check via local server
+  - [x] Commit, push, update PR
