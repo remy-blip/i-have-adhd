@@ -2,7 +2,7 @@
   "name": "mushroom-therapy-experts",
   "displayName": "Mushroom Therapy Experts",
   "version": "1.0.0",
-  "description": "Specialist Cursor agents for evidence-based discussion of psilocybin and psychoactive mushroom therapy: research, addiction medicine, eating disorders, harm reduction, and cultural context.",
+  "description": "Specialist Cursor agents for evidence-based psilocybin therapy discussion plus a session facilitator for assessment, preparation planning, and in-session guidance (no dosing or sourcing).",
   "author": {
     "name": "Remy Kufahl"
   },
