@@ -91,6 +91,10 @@ A skill for your coding assistant that stops it from burying the answer. Action 
 
 Fork, edit `skills/i-have-adhd/SKILL.md`, install your fork: `claude plugin marketplace add <your-username>/i-have-adhd`. Re-invoke `/i-have-adhd`.
 
+## Related plugin in this marketplace
+
+This repo also ships **`mushroom-therapy-experts`**: Cursor/Claude agents for evidence-based discussion of psilocybin therapy (research, addiction medicine, eating disorders, harm reduction, cultural context). See [mushroom-therapy-experts/README.md](./mushroom-therapy-experts/README.md). Install with `claude plugin install mushroom-therapy-experts@i-have-adhd` after adding this marketplace.
+
 ## Credits
 
 Loosely based on *The Adult ADHD Tool Kit* by J. Russell Ramsay and Anthony L. Rostain. Adapted for how an LLM should respond, not how a human should organize their day.

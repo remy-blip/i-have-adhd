@@ -1,0 +1,19 @@
+{
+  "name": "mushroom-therapy-experts",
+  "displayName": "Mushroom Therapy Experts",
+  "version": "1.0.0",
+  "description": "Specialist Cursor agents for evidence-based discussion of psilocybin and psychoactive mushroom therapy: research, addiction medicine, eating disorders, harm reduction, and cultural context.",
+  "author": {
+    "name": "Remy Kufahl"
+  },
+  "license": "MIT",
+  "keywords": [
+    "psilocybin",
+    "psychedelic-therapy",
+    "harm-reduction",
+    "addiction",
+    "eating-disorders",
+    "agents"
+  ],
+  "category": "education"
+}
