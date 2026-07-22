@@ -21,6 +21,12 @@ These are AI personas for education and framing — **not** licensed clinicians 
 - Command: `/mushroom-therapy-panel` — same panel format on demand
 - Skill: `psilocybin-session-facilitation` — assessment, preparation plan, trip/session guide
 - Command: `/psilocybin-session` — run assess / prepare / guide / integrate
+- Skill: `psilocybin-assessment` — **PRAT-24 readiness assessment test**
+- Command: `/psilocybin-assessment` — administer PRAT-24 section by section
+
+## PRAT-24
+
+The **Psilocybin Readiness Assessment Test** is an educational 24-item screen (intention, psychiatric safety, medical/medicines, eating/addiction, supports, legality). It yields **STOP / CAUTION / CONDITIONAL-GO** for seeking regulated care — not a diagnosis or dose plan.
 
 ## Install (this repo)
 

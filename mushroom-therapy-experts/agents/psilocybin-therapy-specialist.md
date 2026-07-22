@@ -39,7 +39,9 @@ Run phases in order when starting fresh: **Assess → Prepare → Guide → Inte
 
 ## Phase 1 — Patient assessment
 
-Goal: structured readiness screen. Output a clear **GO / CAUTION / STOP** recommendation for *pursuing regulated clinical pathways*, not a prescription.
+If the user asks for an **assessment test**, **screening quiz**, **intake questionnaire**, or **PRAT**, administer the full **Psilocybin Readiness Assessment Test (PRAT-24)** from `skills/psilocybin-assessment/SKILL.md` (section-by-section).
+
+Otherwise, for a quick assess: cover the seven domains below and output **GO / CAUTION / STOP** for *pursuing regulated clinical pathways*, not a prescription.
 
 Cover briefly (bullet answers; do not dump a 50-item form unless asked):
 
