@@ -33,11 +33,16 @@ The **Psilocybin Readiness Assessment Test** is an educational 24-item screen (i
 Open the browser UI:
 
 ```bash
-cd mushroom-therapy-experts/assessment-dashboard
+cd /workspace/mushroom-therapy-experts/assessment-dashboard
 python3 -m http.server 8765
 ```
 
 Then visit http://127.0.0.1:8765 — section-by-section flow, live scoring, and a results dashboard (meter, STOP flags, risks/strengths, next action).
+
+Dashboard files:
+- `/workspace/mushroom-therapy-experts/assessment-dashboard/index.html`
+- `/workspace/mushroom-therapy-experts/assessment-dashboard/styles.css`
+- `/workspace/mushroom-therapy-experts/assessment-dashboard/app.js`
 
 ## Install (this repo)
 
@@ -48,7 +53,7 @@ If you use the marketplace entry from this repository:
 claude plugin install mushroom-therapy-experts@i-have-adhd
 ```
 
-For local Cursor use, copy or symlink this folder to `~/.cursor/plugins/local/mushroom-therapy-experts/`.
+For local Cursor use, copy or symlink `/workspace/mushroom-therapy-experts` to `/home/ubuntu/.cursor/plugins/local/mushroom-therapy-experts`.
 
 ## Safety
 

@@ -26,8 +26,9 @@ Follow `rules/therapy-safety.mdc`. Never output doses, sourcing, or DIY administ
 
 Prefer the interactive dashboard when the user wants a UI:
 
-- Path: `mushroom-therapy-experts/assessment-dashboard/`
-- Serve: `python3 -m http.server 8765` from that folder, then open `http://127.0.0.1:8765`
+- Path: `/workspace/mushroom-therapy-experts/assessment-dashboard/`
+- Serve: `cd /workspace/mushroom-therapy-experts/assessment-dashboard && python3 -m http.server 8765`
+- Open: `http://127.0.0.1:8765`
 
 ## Answer key conventions
 
