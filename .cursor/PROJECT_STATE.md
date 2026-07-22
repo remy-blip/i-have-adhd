@@ -12,4 +12,4 @@
   - Results never include dosing or medical clearance.
 - **Next Tactical Steps:**
   - [x] Author PRAT-24 skill + `/psilocybin-assessment` command
-  - [ ] Sync local plugin, commit, push, update PR
+  - [x] Sync local plugin, commit, push, update PR
