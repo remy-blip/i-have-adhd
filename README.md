@@ -35,6 +35,17 @@ Then type `$i-have-adhd` to apply the output style explicitly. The skill can als
 
 </details>
 
+<details>
+<summary><strong>Cursor</strong></summary>
+
+```bash
+git clone https://github.com/ayghri/i-have-adhd.git ~/.cursor/plugins/local/i-have-adhd
+```
+
+Restart Cursor (or open a new Agent chat), then type `/i-have-adhd`.
+
+</details>
+
 Install instructions for other coding agents live in [INSTALL.md](./INSTALL.md).
 
 ## What it does
@@ -89,7 +100,16 @@ A skill for your coding assistant that stops it from burying the answer. Action 
 
 ## Tune it
 
-Fork, edit `skills/i-have-adhd/SKILL.md`, install your fork: `claude plugin marketplace add <your-username>/i-have-adhd`. Re-invoke `/i-have-adhd`.
+Fork, edit `skills/i-have-adhd/SKILL.md`, then install your fork (uninstall upstream first — the names collide):
+
+```bash
+claude plugin uninstall i-have-adhd
+claude plugin marketplace remove i-have-adhd
+claude plugin marketplace add <your-username>/i-have-adhd
+claude plugin install i-have-adhd@i-have-adhd
+```
+
+Re-invoke `/i-have-adhd`. For Cursor, clone your fork into `~/.cursor/plugins/local/i-have-adhd` instead.
 
 ## Credits
 

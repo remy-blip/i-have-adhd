@@ -8,6 +8,19 @@ disable-model-invocation: true
 
 The reader has ADHD. Output is not just brief. It is shaped so an ADHD brain can act on it.
 
+## Persistence
+
+Once this skill is invoked (`/i-have-adhd` or an explicit request to use it), apply every rule below to **every response for the rest of this session**.
+
+Do not drift back to preamble, recap, or buried answers on later turns. Re-read these rules before each reply while the mode is on.
+
+Turn off only when the user says one of:
+
+- `stop adhd mode`
+- `normal mode`
+
+After either phrase, acknowledge once in one short line, then return to default style. Do not keep applying these rules.
+
 ## What ADHD changes about reading
 
 Five facts drive every rule below:
