@@ -13,4 +13,4 @@
   - Guide mode is grounding/presence language; requires human sitter disclaimer.
 - **Next Tactical Steps:**
   - [x] Author `psilocybin-therapy-specialist` + session skill/command
-  - [ ] Sync local plugin copy, commit, push, update PR
+  - [x] Sync local plugin copy, commit, push, update PR
