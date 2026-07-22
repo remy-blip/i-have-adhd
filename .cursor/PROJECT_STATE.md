@@ -15,4 +15,4 @@
   - User-facing paths documented as absolute `/workspace/...` only.
 - **Next Tactical Steps:**
   - [x] Convert dashboard docs to absolute paths
-  - [ ] Commit, push, update PR
+  - [x] Commit, push, update PR
