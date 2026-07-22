@@ -28,6 +28,17 @@ These are AI personas for education and framing — **not** licensed clinicians 
 
 The **Psilocybin Readiness Assessment Test** is an educational 24-item screen (intention, psychiatric safety, medical/medicines, eating/addiction, supports, legality). It yields **STOP / CAUTION / CONDITIONAL-GO** for seeking regulated care — not a diagnosis or dose plan.
 
+### Interactive dashboard
+
+Open the browser UI:
+
+```bash
+cd mushroom-therapy-experts/assessment-dashboard
+python3 -m http.server 8765
+```
+
+Then visit http://127.0.0.1:8765 — section-by-section flow, live scoring, and a results dashboard (meter, STOP flags, risks/strengths, next action).
+
 ## Install (this repo)
 
 If you use the marketplace entry from this repository:

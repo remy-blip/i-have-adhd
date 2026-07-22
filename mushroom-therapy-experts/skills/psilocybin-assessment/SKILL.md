@@ -24,6 +24,11 @@ Follow `rules/therapy-safety.mdc`. Never output doses, sourcing, or DIY administ
 4. After all sections, compute the scorecard and give **STOP / CAUTION / CONDITIONAL-GO**.
 5. End with top risks, top strengths, and **one** next action. Offer `/psilocybin-session` prepare phase if CONDITIONAL-GO and they want a prep plan.
 
+Prefer the interactive dashboard when the user wants a UI:
+
+- Path: `mushroom-therapy-experts/assessment-dashboard/`
+- Serve: `python3 -m http.server 8765` from that folder, then open `http://127.0.0.1:8765`
+
 ## Answer key conventions
 
 | Code | Meaning |

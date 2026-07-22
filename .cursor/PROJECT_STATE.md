@@ -1,15 +1,17 @@
 # Project state
 
-- **Current Objective:** Ship PRAT-24 (Psilocybin Readiness Assessment Test) as an interactive screening command/skill.
+- **Current Objective:** Ship an interactive PRAT-24 assessment dashboard in the browser.
 - **Active Code Matrix:**
-  - `mushroom-therapy-experts/skills/psilocybin-assessment/SKILL.md`
-  - `mushroom-therapy-experts/commands/psilocybin-assessment.md`
-  - `mushroom-therapy-experts/agents/psilocybin-therapy-specialist.md`
+  - `mushroom-therapy-experts/assessment-dashboard/index.html`
+  - `mushroom-therapy-experts/assessment-dashboard/styles.css`
+  - `mushroom-therapy-experts/assessment-dashboard/app.js`
   - `mushroom-therapy-experts/README.md`
+  - `mushroom-therapy-experts/skills/psilocybin-assessment/SKILL.md`
 - **Architectural Decisions:**
-  - PRAT-24 is educational only; STOP flags override point totals.
-  - Administered section-by-section (A–F), not one giant form dump.
-  - Results never include dosing or medical clearance.
+  - Static HTML/CSS/JS dashboard (no build step) for easy local open/serve.
+  - Kelp/lichen visual system; Fraunces + Manrope; section flow + results meter.
+  - Scoring mirrors PRAT-24 STOP flags and readiness points; no dosing output.
 - **Next Tactical Steps:**
-  - [x] Author PRAT-24 skill + `/psilocybin-assessment` command
-  - [x] Sync local plugin, commit, push, update PR
+  - [x] Build dashboard UI + scoring engine
+  - [ ] Smoke-check via local server
+  - [ ] Commit, push, update PR

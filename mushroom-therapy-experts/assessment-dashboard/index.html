@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PRAT-24 · Psilocybin Readiness Assessment</title>
+  <meta name="description" content="Interactive educational screening dashboard for regulated psilocybin-assisted therapy readiness. Not medical clearance." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="atmosphere" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <div>
+        <p class="brand-name">PRAT-24</p>
+        <p class="brand-sub">Readiness Assessment</p>
+      </div>
+    </div>
+    <div class="topbar-meta">
+      <span class="pill">Educational screen</span>
+      <span class="pill pill-muted">Not medical clearance</span>
+    </div>
+  </header>
+
+  <main id="app">
+    <!-- Welcome -->
+    <section id="view-welcome" class="view view-active" aria-label="Welcome">
+      <div class="hero">
+        <p class="eyebrow">Psilocybin Readiness Assessment Test</p>
+        <h1>Know where you stand before you seek care.</h1>
+        <p class="lede">
+          A 24-item interactive screen for talking with a clinician about
+          <em>regulated</em> psilocybin-assisted therapy. It cannot diagnose,
+          clear you medically, or recommend a dose.
+        </p>
+        <div class="cta-row">
+          <button type="button" class="btn btn-primary" id="btn-start">Begin assessment</button>
+          <button type="button" class="btn btn-ghost" id="btn-how">How scoring works</button>
+        </div>
+        <p class="crisis-note">
+          If you are in crisis or not safe right now, contact local emergency services or a crisis line before continuing.
+        </p>
+      </div>
+
+      <aside class="welcome-panel" id="scoring-panel" hidden>
+        <h2>How scoring works</h2>
+        <ul>
+          <li><strong>STOP flags</strong> override everything — pause and seek clinical care.</li>
+          <li><strong>Readiness points</strong> sum protective and caution answers (max 32).</li>
+          <li><strong>CONDITIONAL-GO</strong> only means it may be reasonable to seek regulated intake — still not clearance.</li>
+        </ul>
+      </aside>
+    </section>
+
+    <!-- Assessment -->
+    <section id="view-assess" class="view" aria-label="Assessment" hidden>
+      <div class="assess-layout">
+        <aside class="rail">
+          <div class="progress-block">
+            <div class="progress-label">
+              <span>Progress</span>
+              <span id="progress-text">0 / 24</span>
+            </div>
+            <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="24" aria-valuenow="0" id="progress-bar">
+              <div class="progress-fill" id="progress-fill"></div>
+            </div>
+          </div>
+          <nav class="section-nav" aria-label="Sections">
+            <button type="button" class="section-chip" data-section="0" disabled>A · Intention</button>
+            <button type="button" class="section-chip" data-section="1" disabled>B · Psychiatric</button>
+            <button type="button" class="section-chip" data-section="2" disabled>C · Medical</button>
+            <button type="button" class="section-chip" data-section="3" disabled>D · Eating</button>
+            <button type="button" class="section-chip" data-section="4" disabled>E · Supports</button>
+            <button type="button" class="section-chip" data-section="5" disabled>F · Access</button>
+          </nav>
+          <div class="live-score">
+            <p class="live-score-label">Running points</p>
+            <p class="live-score-value" id="live-points">0</p>
+            <p class="live-stop" id="live-stops">No STOP flags yet</p>
+          </div>
+        </aside>
+
+        <div class="assess-main">
+          <header class="section-header">
+            <p class="section-kicker" id="section-kicker">Section A</p>
+            <h2 id="section-title">Intention &amp; expectations</h2>
+            <p class="section-desc" id="section-desc"></p>
+          </header>
+
+          <form id="question-form" class="question-form"></form>
+
+          <div class="form-actions">
+            <button type="button" class="btn btn-ghost" id="btn-back" disabled>Back</button>
+            <button type="button" class="btn btn-primary" id="btn-next">Continue</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results dashboard -->
+    <section id="view-results" class="view" aria-label="Results dashboard" hidden>
+      <div class="results-hero">
+        <p class="eyebrow">PRAT-24 results</p>
+        <h2 id="result-label">—</h2>
+        <p class="lede" id="result-summary"></p>
+      </div>
+
+      <div class="dashboard-grid">
+        <article class="dash-panel meter-panel">
+          <h3>Readiness meter</h3>
+          <div class="meter">
+            <svg viewBox="0 0 120 120" class="meter-ring" aria-hidden="true">
+              <circle cx="60" cy="60" r="52" class="meter-track" />
+              <circle cx="60" cy="60" r="52" class="meter-value" id="meter-value" />
+            </svg>
+            <div class="meter-center">
+              <span id="meter-score">0</span>
+              <span class="meter-max">/ 32</span>
+            </div>
+          </div>
+          <p class="meter-caption" id="meter-caption"></p>
+        </article>
+
+        <article class="dash-panel">
+          <h3>STOP flags</h3>
+          <ul class="flag-list" id="stop-list"></ul>
+        </article>
+
+        <article class="dash-panel">
+          <h3>Top risks</h3>
+          <ol class="insight-list" id="risk-list"></ol>
+        </article>
+
+        <article class="dash-panel">
+          <h3>Top strengths</h3>
+          <ol class="insight-list" id="strength-list"></ol>
+        </article>
+
+        <article class="dash-panel span-2">
+          <h3>Section breakdown</h3>
+          <div class="bars" id="section-bars"></div>
+        </article>
+
+        <article class="dash-panel span-2 next-panel">
+          <h3>One next action</h3>
+          <p id="next-action"></p>
+          <div class="cta-row">
+            <button type="button" class="btn btn-primary" id="btn-restart">Retake assessment</button>
+            <button type="button" class="btn btn-ghost" id="btn-print">Print / save</button>
+          </div>
+          <p class="fineprint">
+            Reminder: not medical clearance. No dosing guidance. Review with a licensed clinician before any real session.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>PRAT-24 · mushroom-therapy-experts · AI educational tool — not a licensed clinical service.</p>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
