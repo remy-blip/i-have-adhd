@@ -11,6 +11,12 @@
       "description": "Action-first, ADHD-friendly output shaping for Claude Code.",
       "source": "./",
       "category": "productivity"
+    },
+    {
+      "name": "mushroom-therapy-experts",
+      "description": "Expert agents for evidence-based psilocybin / psychoactive mushroom therapy discussion (research, addiction, ED, harm reduction).",
+      "source": "./mushroom-therapy-experts",
+      "category": "education"
     }
   ]
 }
